@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import avatar from "../assets/avatar.png";
 
-declare module "*.png" {
-  const value: string;
-  export default value;
-}
-
 export default function Portfolio() {
   return (
     <div className="flex flex-col items-center text-center space-y-6">
@@ -15,18 +10,19 @@ export default function Portfolio() {
         className="w-32 h-32 rounded-full shadow-lg"
       />
       <motion.h1
-        className="text-3xl font-bold"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        style={{ fontSize: "1.875rem", fontWeight: "bold" }}
       >
         Hi, I'm Victor 👋
       </motion.h1>
       <motion.p
-        className="text-lg text-gray-600 dark:text-gray-300"
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
+        style={{ fontSize: "1.125rem", color: "#4B5563" }}
+        className="text-lg text-gray-600 dark:text-gray-300"
       >
         <span className="animate-pulse">Code, coffee & creativity ☕💻</span>
       </motion.p>
